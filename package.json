@@ -1,0 +1,17 @@
+{
+  "name": "volunteerhub",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "Frontend"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
+  "scripts": {
+    "dev": "npm run dev --workspace=Frontend",
+    "build": "npm run build --workspace=Frontend",
+    "start": "npm run start --workspace=Frontend",
+    "preview": "npm run preview --workspace=Frontend"
+  }
+}
