@@ -1,4 +1,11 @@
 node_modules/
+.next
+out
 dist/
+next-env.d.ts
+*.tsbuildinfo
 .env*
 !.env.example
+.DS_Store
+npm-debug.log*
+.vercel
