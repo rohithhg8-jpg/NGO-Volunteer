@@ -3,19 +3,50 @@
 A simple web app that connects volunteers with NGO coordinators. Coordinators create community
 activities and review applications; volunteers join activities and track their application status.
 
-Built with Next.js (App Router), TypeScript and Tailwind CSS. Data is stored in the browser's
-localStorage, so no database or paid service is needed.
+The repository contains:
 
-## Run locally
+- **Root (Next.js app)** – the full VolunteerHub app, built with Next.js (App Router), TypeScript
+  and Tailwind CSS. Data is stored in the browser's localStorage, so no database or paid service
+  is needed.
+- **`Frontend/`** – a React application powered by Vite, set up as an npm workspace.
+- **`Backend/`** – a placeholder for future server-side code.
 
-Requirements: Node.js 20 or newer.
+## Requirements
+
+- Node.js 20.19+ or 22.12+
+- npm
+
+## Development
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open http://localhost:3000.
+Open http://localhost:3000 for the Next.js app.
+
+To run the Vite frontend instead:
+
+```bash
+npm run frontend:dev
+```
+
+Vite prints the local development URL after the server starts.
+
+## Production
+
+```bash
+# Next.js app
+npm run build
+npm run start
+
+# Vite frontend
+npm run frontend:build
+npm run frontend:preview
+```
+
+`npm run frontend:start` starts the Vite development server. The `frontend:*` scripts forward to
+the `Frontend` workspace.
 
 ## Demo accounts
 
@@ -50,6 +81,8 @@ lib/
   storage.ts  localStorage read/write + change subscription
   actions.ts  Business logic (register, login, create, join, approve/reject)
   seed.ts     Demo data
+Frontend/     Vite + React frontend (npm workspace)
+Backend/      Reserved for server-side code
 ```
 
 ## Moving to a real database later

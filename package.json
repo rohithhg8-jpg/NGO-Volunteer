@@ -1,12 +1,22 @@
 {
   "name": "volunteerhub",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "workspaces": [
+    "Frontend"
+  ],
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "frontend:dev": "npm run dev --workspace=Frontend",
+    "frontend:build": "npm run build --workspace=Frontend",
+    "frontend:start": "npm run start --workspace=Frontend",
+    "frontend:preview": "npm run preview --workspace=Frontend"
   },
   "dependencies": {
     "next": "16.4.6",
